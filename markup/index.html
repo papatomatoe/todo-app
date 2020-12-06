@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>ToDo</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header container">
+      <img class="header__logo" src="img/LOGO.svg" width="125" height="44" alt="ToDo Logo">
+      <ul class="header__list">
+        <li class="header__item">
+          <p class="header__text">
+            <span class="header__label">Total: </span>
+            <span class="header__vlaue">3</span>
+          </p>
+        </li>
+        <li class="header__item">
+          <p class="header__text">
+            <span class="header__label">Done: </span>
+            <span class="header__vlaue">1</span>
+          </p>
+        </li>
+      </ul>
+    </header>
+    <main class="content container">
+      <h1 class="visually-hidden">ToDo Application</h1>
+      <section class="tasks">
+        <h2 class="visually-hidden">Tasks list</h2>
+        <ul class="tasks__list">
+          <li class="tasks__item">
+            <h3 class="tasks__title">Drink Coffee Drink Coffee Drink Coffee</h3>
+            <div class="tasks__btns">
+              <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
+              <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
+            </div>
+          </li>
+          <li class="tasks__item tasks__item--done">
+            <h3 class="tasks__title">Drink Coffee</h3>
+            <div class="tasks__btns">
+              <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
+              <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
+            </div>
+          </li>
+          <li class="tasks__item tasks__item--important">
+            <h3 class="tasks__title">Drink Coffee</h3>
+            <div class="tasks__btns">
+              <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
+              <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="add-task">
+        <h2 class="visually-hidden">Create tasks</h2>
+        <form class="add-task__form" method="POST" action="#">
+          <div class="add-task__wrapper">
+            <input type="text" class="add-task__input" placeholder="input task name..." minlength="1" maxlength="100"
+              required>
+            <button class="add-task__important" type="button" aria-label="make important"></button>
+          </div>
+          <button class="add-task__btn" type="button">Add Task</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer container">
+      <img class="footer__logo" src="img/LOGO.svg" width="44" height="15" alt="ToDo Logo">
+      <p class="footer__copy">2020</p>
+    </footer>
+  </div>
+</body>
+
+</html>
