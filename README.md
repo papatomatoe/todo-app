@@ -1,4 +1,4 @@
-#### todo-app
+# todo-app
 
 # Getting Started with Create React App
 
