@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -26,70 +26,103 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <div class="wrapper">
-    <header class="header container">
-      <img class="header__logo" src="img/LOGO.svg" width="125" height="44" alt="ToDo Logo">
-      <ul class="header__list">
-        <li class="header__item">
-          <p class="header__text">
-            <span class="header__label">Total: </span>
-            <span class="header__vlaue">3</span>
-          </p>
+<body class="body">
+  <header class="header container">
+    <img class="header__logo" src="img/LOGO.svg" width="125" height="44" alt="ToDo Logo">
+    <ul class="header__list">
+      <li class="header__item">
+        <p class="header__text">
+          <span class="header__label">Total: </span>
+          <span class="header__vlaue">3</span>
+        </p>
+      </li>
+      <li class="header__item">
+        <p class="header__text">
+          <span class="header__label">Done: </span>
+          <span class="header__vlaue">1</span>
+        </p>
+      </li>
+    </ul>
+  </header>
+  <main class="content container">
+    <h1 class="visually-hidden">ToDo Application</h1>
+    <section class="tasks">
+      <h2 class="visually-hidden">Tasks list</h2>
+      <ul class="tasks__list">
+        <li class="tasks__item">
+          <h3 class="tasks__title">Drink Coffee Drink Coffee Drink Coffee</h3>
+          <div class="tasks__btns">
+            <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
+            <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
+          </div>
         </li>
-        <li class="header__item">
-          <p class="header__text">
-            <span class="header__label">Done: </span>
-            <span class="header__vlaue">1</span>
-          </p>
+        <li class="tasks__item">
+          <h3 class="tasks__title">Drink Coffee Drink Coffee Drink Coffee</h3>
+          <div class="tasks__btns">
+            <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
+            <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
+          </div>
+        </li>
+        <li class="tasks__item">
+          <h3 class="tasks__title">Drink Coffee Drink Coffee Drink Coffee</h3>
+          <div class="tasks__btns">
+            <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
+            <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
+          </div>
+        </li>
+        <li class="tasks__item">
+          <h3 class="tasks__title">Drink Coffee Drink Coffee Drink Coffee</h3>
+          <div class="tasks__btns">
+            <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
+            <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
+          </div>
+        </li>
+        <li class="tasks__item">
+          <h3 class="tasks__title">Drink Coffee Drink Coffee Drink Coffee</h3>
+          <div class="tasks__btns">
+            <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
+            <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
+          </div>
+        </li>
+        <li class="tasks__item">
+          <h3 class="tasks__title">Drink Coffee Drink Coffee Drink Coffee</h3>
+          <div class="tasks__btns">
+            <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
+            <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
+          </div>
+        </li>
+        <li class="tasks__item tasks__item--done">
+          <h3 class="tasks__title">Drink Coffee</h3>
+          <div class="tasks__btns">
+            <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
+            <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
+          </div>
+        </li>
+        <li class="tasks__item tasks__item--important">
+          <h3 class="tasks__title">Drink Coffee</h3>
+          <div class="tasks__btns">
+            <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
+            <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
+          </div>
         </li>
       </ul>
-    </header>
-    <main class="content container">
-      <h1 class="visually-hidden">ToDo Application</h1>
-      <section class="tasks">
-        <h2 class="visually-hidden">Tasks list</h2>
-        <ul class="tasks__list">
-          <li class="tasks__item">
-            <h3 class="tasks__title">Drink Coffee Drink Coffee Drink Coffee</h3>
-            <div class="tasks__btns">
-              <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
-              <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
-            </div>
-          </li>
-          <li class="tasks__item tasks__item--done">
-            <h3 class="tasks__title">Drink Coffee</h3>
-            <div class="tasks__btns">
-              <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
-              <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
-            </div>
-          </li>
-          <li class="tasks__item tasks__item--important">
-            <h3 class="tasks__title">Drink Coffee</h3>
-            <div class="tasks__btns">
-              <button class="task__btn task__btn--important" type="button" aria-label="make important"></button>
-              <button class="task__btn task__btn--delete" type="button" aria-label="delete"></button>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section class="add-task">
-        <h2 class="visually-hidden">Create tasks</h2>
-        <form class="add-task__form" method="POST" action="#">
-          <div class="add-task__wrapper">
-            <input type="text" class="add-task__input" placeholder="input task name..." minlength="1" maxlength="100"
-              required>
-            <button class="add-task__important" type="button" aria-label="make important"></button>
-          </div>
-          <button class="add-task__btn" type="button">Add Task</button>
-        </form>
-      </section>
-    </main>
-    <footer class="footer container">
-      <img class="footer__logo" src="img/LOGO.svg" width="44" height="15" alt="ToDo Logo">
-      <p class="footer__copy">2020</p>
-    </footer>
-  </div>
+    </section>
+    <section class="add-task">
+      <h2 class="visually-hidden">Create tasks</h2>
+      <form class="add-task__form" method="POST" action="#">
+        <div class="add-task__wrapper">
+          <input type="text" class="add-task__input" placeholder="input task name..." minlength="1" maxlength="100"
+            required>
+          <button class="add-task__important" type="button" aria-label="make important"></button>
+        </div>
+        <button class="add-task__btn" type="button">Add Task</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer container">
+    <img class="footer__logo" src="img/LOGO.svg" width="44" height="15" alt="ToDo Logo">
+    <p class="footer__copy">2020</p>
+  </footer>
 </body>
 
 </html>
