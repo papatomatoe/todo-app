@@ -5,7 +5,36 @@ class CreateTask extends React.Component {
   state = {
     title: '',
     isImportant: false,
+    isError: false,
   };
+
+  styles = {
+    input: {
+      normal: {
+        borderColor: '#ffffff',
+        color: '#ffffff',
+        backgroundColor: 'transparent'
+      },
+      important: {
+        borderColor: '#dc143c',
+        color: '#dc143c'
+      },
+      error: {
+        borderColor: '#ff0000',
+        backgroundColor: '#ff0000'
+      }
+    },
+    button: {
+      normal: {
+        borderColor: '#ffffff',
+        backgroundColor: 'transparent'
+      },
+      important: {
+        borderColor: '#dc143c',
+        backgroundColor: '#dc143c'
+      }
+    }
+  }
 
   titleSetHandler = (title) => {
     this.setState({ title })
@@ -13,6 +42,10 @@ class CreateTask extends React.Component {
 
   addNewTaskHandler = (title, isImportant) => {
     const { addNewTask } = this.props;
+    if (!title) {
+      this.setState({ isError: true });
+      return;
+    }
     addNewTask(title, isImportant);
     this.setState({ title: '', isImportant: false });
   }
@@ -23,7 +56,8 @@ class CreateTask extends React.Component {
 
   render() {
 
-    const { title, isImportant } = this.state;
+    const { title, isImportant, isError } = this.state;
+    const inputStyles = isImportant ? this.styles.input.important : this.styles.input.normal
 
     return (
       <section className="add-task">
@@ -31,20 +65,25 @@ class CreateTask extends React.Component {
         <form className="add-task__form" method="POST" action="#">
           <div className="add-task__wrapper">
             <input
-              onChange={(evt) => this.titleSetHandler(evt.target.value)}
+              onChange={(evt) => {
+                this.titleSetHandler(evt.target.value);
+                this.setState({ isError: false })
+              }}
               value={title}
               type="text"
               className="add-task__input"
-              placeholder="input task name..."
+              placeholder={"input task name..."}
               minLength="1"
               maxLength="100"
-              required
+              required={true}
+              style={isError ? this.styles.input.error : inputStyles}
             />
             <button
               onClick={() => this.setImportantHandler(isImportant)}
               className="add-task__important"
               type="button"
-              aria-label="make important"></button>
+              aria-label="make important"
+              style={isImportant ? this.styles.button.important : this.styles.button.normal}></button>
           </div>
           <button
             className="add-task__btn"
